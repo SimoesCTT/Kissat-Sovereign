@@ -1,3 +1,4 @@
+#include "sovereign.h"
 #include "application.h"
 #include "check.h"
 #include "colors.h"
