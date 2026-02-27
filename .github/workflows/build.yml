@@ -1,0 +1,15 @@
+name: build
+on: [push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure and Build
+        run: |
+          ./configure
+          make -j$(nproc)
+          
+      - name: Verify Binary
+        run: ./build/kissat --version
