@@ -1,0 +1,7 @@
+#define KISSAT_VERSION "2.0.0-Apex"
+#define KISSAT_COMPILER "gcc 15.2.1"
+#define KISSAT_ID "Sovereign-Logic"
+#define KISSAT_BUILD "2026-03-01"
+#define KISSAT_DIR "/home/americosimoes/kissat-sovereign"
+#define LIGHT_BLUE ""
+#define NORMAL ""
