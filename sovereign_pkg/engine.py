@@ -2,20 +2,20 @@ import subprocess
 import sys
 import os
 
-class Zenith:
+class SovereignEngine:
     def __init__(self):
-        # Look for the binary in the expected build path
+        # Look for the binary created by the setup.py build step
         self.binary = os.path.abspath("./build/kissat")
         if not os.path.exists(self.binary):
-            raise FileNotFoundError("Sovereign binary not found. Please run 'make' first.")
+            # Fallback for installed location
+            self.binary = "kissat" 
 
     def solve(self, cnf_path):
         if not os.path.exists(cnf_path):
-            print(f"[ERROR] {cnf_path} not found.")
+            print(f"\033[1;31m[ERROR]\033[0m {cnf_path} not found.")
             return
 
-        # We use Popen with sys.stdout to ensure the LIVE terminal output
-        # including the blue banner and 0.00s profiling, is shown.
+        # Streaming the raw NS-33 output directly to the user's terminal
         process = subprocess.Popen(
             [self.binary, cnf_path],
             stdout=sys.stdout,
@@ -30,7 +30,7 @@ class Zenith:
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: sovereign <file.cnf>")
+        print("Usage: kissat-sovereign <file.cnf>")
     else:
-        z = Zenith()
-        z.solve(sys.argv[1])
+        engine = SovereignEngine()
+        engine.solve(sys.argv[1])

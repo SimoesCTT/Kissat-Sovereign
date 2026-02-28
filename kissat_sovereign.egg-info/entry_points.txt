@@ -1,0 +1,2 @@
+[console_scripts]
+kissat-sovereign = sovereign_pkg.engine:main
