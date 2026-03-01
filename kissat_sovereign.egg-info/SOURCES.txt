@@ -2,6 +2,7 @@ LICENSE
 MANIFEST.in
 README.md
 VERSION
+pyproject.toml
 setup.py
 kissat_sovereign.egg-info/PKG-INFO
 kissat_sovereign.egg-info/SOURCES.txt
@@ -10,6 +11,7 @@ kissat_sovereign.egg-info/entry_points.txt
 kissat_sovereign.egg-info/top_level.txt
 sovereign_pkg/__init__.py
 sovereign_pkg/engine.py
+sovereign_pkg/kissat
 src_bundle/VERSION
 src_bundle/allocate.c
 src_bundle/allocate.h

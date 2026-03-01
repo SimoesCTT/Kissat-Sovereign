@@ -1,3 +1,3 @@
-recursive-include src_bundle *
-include VERSION
+include sovereign_pkg/*.so
 include LICENSE
+include README.md

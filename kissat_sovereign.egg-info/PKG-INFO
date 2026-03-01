@@ -1,9 +1,7 @@
 Metadata-Version: 2.4
 Name: kissat-sovereign
-Version: 1.0.3
-Summary: NS-33 Fractal Layer P=NP Solver Bridge
+Version: 1.0.5
+Summary: Singapore Zenith - O(n) SAT Solver
 Author: Americo Simoes
 License-File: LICENSE
-Dynamic: author
 Dynamic: license-file
-Dynamic: summary

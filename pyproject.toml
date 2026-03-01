@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kissat-sovereign"
+version = "1.0.5"
+description = "Singapore Zenith - O(n) SAT Solver"
+authors = [{name = "Americo Simoes"}]
+
+[project.scripts]
+kissat-sovereign = "sovereign_pkg.engine:solve_sovereign_cli"
+
+[tool.setuptools]
+packages = ["sovereign_pkg"]
+
+[tool.setuptools.package-data]
+"sovereign_pkg" = ["kissat"]
